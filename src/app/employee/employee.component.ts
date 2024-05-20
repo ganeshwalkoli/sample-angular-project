@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from './employee';
-import { EmployeeService } from './employee.service';
+import { Employee } from '../employee';
+import { EmployeeService } from '../employee.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-employee',
+  templateUrl: './employee.component.html',
+  styleUrls: ['./employee.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'emp-crud';
+export class EmployeeComponent implements OnInit {
   employees: Employee[] = [];
   employee: Employee = new Employee();
   isEdit = false;
@@ -55,7 +54,3 @@ export class AppComponent implements OnInit {
     this.isEdit = false;
   }
 }
-
-
-
-
