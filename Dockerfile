@@ -1,9 +1,9 @@
 # Base image
-FROM nginx:alpine
+FROM nginx:latest
 
 # Copy built Angular files to Nginx's HTML directory
 # COPY /var/jenkins_home/workspace/test_dockerfile/ndml-kra-fe.tar.gz /usr/share/nginx/html
-COPY /home/ndml-kra-fe.tar.gz /usr/share/nginx/html
+COPY /home/dockerized_web/ndml-kra-fe.tar.gz /usr/share/nginx/html
 RUN cd /usr/share/nginx/html
 RUN tar xzvf ndml-kra-fe.tar.gz
 
